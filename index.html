@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>List</title>
+    <title>Branding Prototype</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/list.css">
@@ -19,10 +19,10 @@
     <header>
         <p class="logo">Company</p>
         <nav>
-            <a href="#">Min anställning</a>
-            <a href="#" class="active">Stöd & service</a>
-            <a href="#">Organisation & ledning</a>
-            <a href="#">Grupper</a>
+            <a href="#" class="list-menu-item">Min anställning</a>
+            <a href="#" class="list-menu-item active">Stöd & service</a>
+            <a href="#" class="list-menu-item">Organisation & ledning</a>
+            <a href="#" class="list-menu-item">Grupper</a>
 
         </nav>
         <div class="tools">
@@ -31,7 +31,7 @@
             <span class="icon"></span>
         </div>
         <div class="personal-menu">
-            <div class="name">Monica<br>Hiizer</div>
+            <div class="name list-app-label">Monica<br>Hiizer</div>
             <div><img src="img/user8.png" class="profile-image-large"></div>
             <div><span></span></div>
         </div>
@@ -102,11 +102,11 @@
                             <a href="#">
                                 <article>
                                     <div>
-                                        <p class="list-subtitle">Bengt Nyberg &lt;bengt.nyberg@company.se&gt;</p>
-                                        <p class="list-text">Avbrutet samarbete med SDAB</p>
+                                        <p class="list-caption">Bengt Nyberg &lt;bengt.nyberg@company.se&gt;</p>
+                                        <p class="list-subtitle">Förnyat samarbete med SDAB</p>
                                         <p class="list-caption">
-                                            Från och med måndagen den 13 april har vårt samarbetsavtal med SDAB upphört.
-                                            Vi tröttnade på deras ständiga gnäll och valde att sparka ut dem med…
+                                            Från och med tisdagen den 14 april har vårt samarbetsavtal med SDAB förnyats.
+                                            Vi är överens om att fördjupa samarbetet med denna partner och ser fram emot lyckosamma affärer…
                                         </p>
                                     </div>
                                 </article>
@@ -381,9 +381,9 @@
                         <div><img src="img/user9.png" class="profile-image-large"></div>
                         <div>
                             <p class="list-subtitle">Kjell-Göran Jansson</p>
-                            <p class="list-caption">TV-spelare</p>
-                            <p class="list-caption">eva.alm@company.se</p>
-                            <p class="list-caption">070-234 56 78</p>
+                            <p class="list-caption">Vice mikrofilmare</p>
+                            <p class="list-caption">kjell-goran.jansson@company.se</p>
+                            <p class="list-caption">070-333 56 78</p>
                         </div>
 
                     </li>
@@ -392,6 +392,7 @@
                 <!-- / Alla medlemmar-->
                 <div class="buttons">
                     <button class="btn btn-brand list-button">Brand button</button>
+                    <button class="btn btn-brand-complement list-button">Brand complement button</button>
                 </div>
                 <div class="newsAndBlock">
                     <div class="card card-news">
@@ -438,6 +439,8 @@
                 <p class="list list-section-heading showcase" id="section-heading">Section Heading</p>
                 <p class="list list-lead showcase" id="lead">Lead</p>
                 <p class="list list-text showcase" id="text">Text</p>
+                <p class="list list-menu-item showcase" id="menu-item">Menu item</p>
+                <p class="list list-app-label showcase" id="app-label">App label</p>
                 <p class="list list-caption showcase" id="caption">Caption</p>
                 <!-- <p class="list list-link showcase" id="link">Link</p> -->
                 <p class="list list-button showcase" id="button">Button</p>
@@ -470,8 +473,8 @@
             </div>
             <div>
                 <label>
-                    <input type="radio" name="style" value="filson">
-                    Filson
+                    <input type="radio" name="style" value="roboto">
+                    Roboto
                 </label>
             </div>
             <div>

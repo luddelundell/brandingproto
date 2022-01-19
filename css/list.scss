@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200;300;400;500;600;700;800&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200;300;400;500;600;700;800&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Inconsolata:wght@300;400;500;600;700;800&family=Inter:wght@200;300;400;500;600;700&family=Lora:wght@400;500;600&family=Mada:wght@200;300;400;500;600;700;900&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap');
 @font-face {
     font-family: icomoon;
     src: url(icomoon.woff);
   }
 :root {
     --brand: #802d79;
+    --brand-dark: hsl(305, 48%, 26%);
     --brand-complement: #3f153b;
+    --brand-complement-dark: hsl(306, 50%, 8%);
     --brand-complement-contrast-text: #fff;
-    --text-on-brand: hsl(305, 100%, 96%);
+    --brand-contrast-text: hsl(305, 100%, 96%);
     --border-color: #eee;
     --hover-background-color: #F8F2F7;
     --subtitle: #202330;
@@ -45,6 +47,7 @@ header {
     display: flex;
     padding: 1.5em 2em;
     background-color: var(--header-background-color);
+    align-items: center;
     p {
         color: var(--header-text-color);
         font-size: 1.5em;
@@ -260,7 +263,7 @@ ul.listing {
             border-radius: 50%;
             padding:4px;
             &:hover {
-                // color: var(--text-on-brand);
+                // color: var(--brand-contrast-text);
                 background-color: var(--hover-background-color);
                 outline: 7px solid var(--hover-background-color);
             }
@@ -296,7 +299,17 @@ ul.listing {
     font-family: var(--theme-font);
     &.btn-brand {
         background-color: var(--brand);
-        color: var(--text-on-brand);
+        color: var(--brand-contrast-text);
+        &:hover {
+            background-color: var(--brand-dark);
+        }
+    }
+    &.btn-brand-complement {
+        background-color: var(--brand-complement);
+        color: var(--brand-complement-contrast-text);
+        &:hover {
+            background-color: var(--brand-complement-dark);
+        }
     }
 }
 a.btn-link {
@@ -462,6 +475,14 @@ a.btn-link {
         margin-top:.5em;
     }
 }
+.list-menu-item {
+    // text-transform: uppercase;
+    // letter-spacing: .1em;
+    font-weight: 500;
+}
+.list-app-label {
+    font-size: 0.875em;
+}
 .list-title {
     font-size: 1.82em;
     font-weight: 500;
@@ -522,14 +543,18 @@ a.btn-link {
 .fancy {
     background-color: #f9f9f9;
     --brand: #0e726d;
-    --text-on-brand: #f5ecfd;
+    --brand-dark: #0b5a56;
+    --brand-contrast-text: #f5ecfd;
+    --brand-complement: #72680e;
+    --brand-complement-dark: #524a09;
+    --brand-complement-contrast-text: #f5ecfd;
     --border-radius:2px;
     // --box-shadow:  12px 12px 24px rgba(207, 207, 207, .35), -6px -6px 12px #ffffff;
     --card-background:#fefefe;
     --profile-image-radius: 50%;
     --theme-font:  'Fira Sans';
     --header-background-color:var(--brand);
-    --header-text-color:var(--text-on-brand);
+    --header-text-color:var(--brand-contrast-text);
     --hover-background-color: #0e726d15;
     font-family: var(var(--theme-font));
     .logo {
@@ -570,7 +595,7 @@ a.btn-link {
 .sitevision {
     --brand: #17CC78;
     --brand-complement:#824FFA;
-    --text-on-brand: #e7faf1;
+    --brand-contrast-text: #e7faf1;
     --border-radius:18px;
     --hover-background-color:#fdeaef;
     --link: #824FFA;
@@ -587,6 +612,11 @@ a.btn-link {
     .list-subtitle {
         font-weight: 200;
         font-family: 'Frank Ruhl libre';
+    }
+    .list-menu-item {
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-weight: 500;
     }
     .list-section-heading {
         font-family: 'Inter';
@@ -611,7 +641,7 @@ a.btn-link {
 }
 .quicksand {
     --brand: #2c3542;
-    --text-on-brand: #b8cae6;
+    --brand-contrast-text: #b8cae6;
     --border-radius:10px;
     --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
     --profile-image-radius: 12px;
@@ -638,15 +668,15 @@ a.btn-link {
         text-transform: uppercase;
     }
 }
-.filson {
+.roboto {
     --brand: #924642;
     --brand-complement:#F4EFF4;
     --brand-complement-contrast-text: var(--brand);
-    --text-on-brand: #FCEDEA;
+    --brand-contrast-text: #FCEDEA;
     --border-radius:10px;
     --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
     --profile-image-radius: 12px;
-    --theme-font: 'Filson soft';
+    --theme-font: 'Roboto';
     font-family: var(--theme-font);
     background-color: #FCEDEA;
     --header-background-color:var(--brand);
@@ -657,34 +687,45 @@ a.btn-link {
         font-weight: 700;
         line-height: 1.1;
         margin:1rem 0;
+        font-family: 'Roboto Slab';
     }
     .list-subtitle {
+        font-weight: 500;      
+    }
+    .list-menu-item {
+        text-transform: uppercase;
+        letter-spacing: .1em;
         font-weight: 500;
-      
+        font-family: 'Roboto Slab';
+    }
+    .list-section-heading {
+        font-family: 'Roboto Slab';
     }
     .list-text {
         font-weight: 400;
-        // font-family: 'Lora';
+      
     }
     .list-caption {
         // color: rgb(77, 66, 66);
         font-weight: 400;
-        // font-family: 'Lora';
+      
     }
     .list-overline {
           letter-spacing: .15em;
         text-transform: uppercase;
+        font-family: 'Roboto Slab';
     }
     .list-button {
         text-transform: uppercase;
         font-weight:600;
         letter-spacing: .1em;
         line-height: 1;
+        font-family: 'Roboto Slab';
     }
 }
 .raleway {
     --brand: #490c1b;
-    --text-on-brand: #f7d6de;
+    --brand-contrast-text: #f7d6de;
     --border-radius:4px;
     --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
     --profile-image-radius: 12px;
@@ -718,24 +759,24 @@ a.btn-link {
 }
 .code {
     --brand: hsl(0, 0%, 14%);
-    --text-on-brand: #f1f1f1;
+    --brand-contrast-text: #f1f1f1;
     --border-color: #ddd;
     --border-radius:0;
     --box-shadow: 0 0 6px rgba(0,0,0,.26);
     --profile-image-radius: 0;
-    --theme-font: 'Code Saver';
+    --theme-font: 'Inconsolata';
     --text: #222;
     --dark-text: #bbb;
     font-family: var(--theme-font);
     background-color: #fff;
     --header-background-color:#444;
     --header-text-color:#999;
-    .list-title {
-        font-family: 'code saver';
-    }
-    .list-subtitle {
-       font-family: 'code saver';
-    }
+    // .list-title {
+    //     font-family: 'code saver';
+    // }
+    // .list-subtitle {
+    //    font-family: 'code saver';
+    // }
     .list-lead {
         font-size: 0.875em;
     }
@@ -752,7 +793,7 @@ a.btn-link {
 }
 .dark {
     --brand: hsl(192, 53%, 7%);
-    --text-on-brand: hsl(205, 10%, 51%);
+    --brand-contrast-text: hsl(205, 10%, 51%);
     --border-color: #363636;
     --hover-background-color:hsl(231, 9%, 14%);
     --border-radius:4px;
@@ -763,7 +804,7 @@ a.btn-link {
     --text: #757575;
     --dark-text: #999999;
     --header-background-color:var(--brand);
-    --header-text-color:var(--text-on-brand);
+    --header-text-color:var(--brand-contrast-text);
     font-family: var(--theme-font);
     background-color: rgb(18, 20, 20);
     color:#757575;
@@ -781,7 +822,7 @@ a.btn-link {
         color: var(--dark-text);
     }
     .list-section-heading {
-        color:var(--text-on-brand);
+        color:var(--brand-contrast-text);
     }
     // .list-lead {
     //     color: var(--dark-text);
@@ -795,7 +836,7 @@ a.btn-link {
     }
     .list-overline {
         // color: rgb(150, 41, 150);
-        color:var(--text-on-brand);
+        color:var(--brand-contrast-text);
     }
     .menuitem a, .menuitem button{
         color:rgb(158, 160, 161);
@@ -807,7 +848,7 @@ a.btn-link {
         cursor:help;
     }
 }
-.dark, .raleway, .oswald, .quicksand, .sitevision, .fancy, .code {
+.dark, .raleway, .oswald, .quicksand, .sitevision, .fancy, .code, .roboto {
     transition: all .5s;
 }
 .feedAndGroups {
@@ -828,7 +869,7 @@ a.btn-link {
             margin-bottom:2em;
         }
         svg {
-            fill: var(--text-on-brand);
+            fill: var(--brand-contrast-text);
             margin:0 auto;
         }
         border-radius: var(--border-radius);
@@ -837,11 +878,11 @@ a.btn-link {
         padding:2.5em 2em 1em 2em;
         background-color: var(--brand);
         .list-text, .list-title, .list-overline {
-            color: var(--text-on-brand);
+            color: var(--brand-contrast-text);
         }
         .list-title {
             margin-bottom:.25em;
         }
     }
 }
-label, legend { font-family: 'code saver';}
+label, legend { font-family: 'Inconsolata';}

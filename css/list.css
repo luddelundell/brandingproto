@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200;300;400;500;600;700;800&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200;300;400;500;600;700;800&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Inconsolata:wght@300;400;500;600;700;800&family=Inter:wght@200;300;400;500;600;700&family=Lora:wght@400;500;600&family=Mada:wght@200;300;400;500;600;700;900&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap");
 @font-face {
   font-family: icomoon;
   src: url(icomoon.woff);
 }
 :root {
   --brand: #802d79;
+  --brand-dark: hsl(305, 48%, 26%);
   --brand-complement: #3f153b;
+  --brand-complement-dark: hsl(306, 50%, 8%);
   --brand-complement-contrast-text: #fff;
-  --text-on-brand: hsl(305, 100%, 96%);
+  --brand-contrast-text: hsl(305, 100%, 96%);
   --border-color: #eee;
   --hover-background-color: #F8F2F7;
   --subtitle: #202330;
@@ -40,6 +42,7 @@ header {
   display: flex;
   padding: 1.5em 2em;
   background-color: var(--header-background-color);
+  align-items: center;
 }
 header p {
   color: var(--header-text-color);
@@ -298,7 +301,17 @@ ul.listing.groups li:first-child {
 }
 .btn.btn-brand {
   background-color: var(--brand);
-  color: var(--text-on-brand);
+  color: var(--brand-contrast-text);
+}
+.btn.btn-brand:hover {
+  background-color: var(--brand-dark);
+}
+.btn.btn-brand-complement {
+  background-color: var(--brand-complement);
+  color: var(--brand-complement-contrast-text);
+}
+.btn.btn-brand-complement:hover {
+  background-color: var(--brand-complement-dark);
 }
 
 a.btn-link {
@@ -468,6 +481,14 @@ a.btn-link:hover {
   margin-top: 0.5em;
 }
 
+.list-menu-item {
+  font-weight: 500;
+}
+
+.list-app-label {
+  font-size: 0.875em;
+}
+
 .list-title {
   font-size: 1.82em;
   font-weight: 500;
@@ -529,13 +550,17 @@ a.btn-link:hover {
 .fancy {
   background-color: #f9f9f9;
   --brand: #0e726d;
-  --text-on-brand: #f5ecfd;
+  --brand-dark: #0b5a56;
+  --brand-contrast-text: #f5ecfd;
+  --brand-complement: #72680e;
+  --brand-complement-dark: #524a09;
+  --brand-complement-contrast-text: #f5ecfd;
   --border-radius:2px;
   --card-background:#fefefe;
   --profile-image-radius: 50%;
   --theme-font: "Fira Sans";
   --header-background-color:var(--brand);
-  --header-text-color:var(--text-on-brand);
+  --header-text-color:var(--brand-contrast-text);
   --hover-background-color: #0e726d15;
   font-family: var(var(--theme-font));
 }
@@ -577,7 +602,7 @@ a.btn-link:hover {
 .sitevision {
   --brand: #17CC78;
   --brand-complement:#824FFA;
-  --text-on-brand: #e7faf1;
+  --brand-contrast-text: #e7faf1;
   --border-radius:18px;
   --hover-background-color:#fdeaef;
   --link: #824FFA;
@@ -595,6 +620,11 @@ a.btn-link:hover {
 .sitevision .list-subtitle {
   font-weight: 200;
   font-family: "Frank Ruhl libre";
+}
+.sitevision .list-menu-item {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
 }
 .sitevision .list-section-heading {
   font-family: "Inter";
@@ -619,7 +649,7 @@ a.btn-link:hover {
 
 .quicksand {
   --brand: #2c3542;
-  --text-on-brand: #b8cae6;
+  --brand-contrast-text: #b8cae6;
   --border-radius:10px;
   --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
   --profile-image-radius: 12px;
@@ -644,50 +674,62 @@ a.btn-link:hover {
   text-transform: uppercase;
 }
 
-.filson {
+.roboto {
   --brand: #924642;
   --brand-complement:#F4EFF4;
   --brand-complement-contrast-text: var(--brand);
-  --text-on-brand: #FCEDEA;
+  --brand-contrast-text: #FCEDEA;
   --border-radius:10px;
   --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
   --profile-image-radius: 12px;
-  --theme-font: "Filson soft";
+  --theme-font: "Roboto";
   font-family: var(--theme-font);
   background-color: #FCEDEA;
   --header-background-color:var(--brand);
   --header-text-color:#FBD6E0;
   --card-background:#FEF9F7;
 }
-.filson .list-title {
+.roboto .list-title {
   font-size: 300%;
   font-weight: 700;
   line-height: 1.1;
   margin: 1rem 0;
+  font-family: "Roboto Slab";
 }
-.filson .list-subtitle {
+.roboto .list-subtitle {
   font-weight: 500;
 }
-.filson .list-text {
+.roboto .list-menu-item {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  font-family: "Roboto Slab";
+}
+.roboto .list-section-heading {
+  font-family: "Roboto Slab";
+}
+.roboto .list-text {
   font-weight: 400;
 }
-.filson .list-caption {
+.roboto .list-caption {
   font-weight: 400;
 }
-.filson .list-overline {
+.roboto .list-overline {
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  font-family: "Roboto Slab";
 }
-.filson .list-button {
+.roboto .list-button {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.1em;
   line-height: 1;
+  font-family: "Roboto Slab";
 }
 
 .raleway {
   --brand: #490c1b;
-  --text-on-brand: #f7d6de;
+  --brand-contrast-text: #f7d6de;
   --border-radius:4px;
   --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
   --profile-image-radius: 12px;
@@ -721,24 +763,18 @@ a.btn-link:hover {
 
 .code {
   --brand: hsl(0, 0%, 14%);
-  --text-on-brand: #f1f1f1;
+  --brand-contrast-text: #f1f1f1;
   --border-color: #ddd;
   --border-radius:0;
   --box-shadow: 0 0 6px rgba(0,0,0,.26);
   --profile-image-radius: 0;
-  --theme-font: "Code Saver";
+  --theme-font: "Inconsolata";
   --text: #222;
   --dark-text: #bbb;
   font-family: var(--theme-font);
   background-color: #fff;
   --header-background-color:#444;
   --header-text-color:#999;
-}
-.code .list-title {
-  font-family: "code saver";
-}
-.code .list-subtitle {
-  font-family: "code saver";
 }
 .code .list-lead {
   font-size: 0.875em;
@@ -752,7 +788,7 @@ a.btn-link:hover {
 
 .dark {
   --brand: hsl(192, 53%, 7%);
-  --text-on-brand: hsl(205, 10%, 51%);
+  --brand-contrast-text: hsl(205, 10%, 51%);
   --border-color: #363636;
   --hover-background-color:hsl(231, 9%, 14%);
   --border-radius:4px;
@@ -763,7 +799,7 @@ a.btn-link:hover {
   --text: #757575;
   --dark-text: #999999;
   --header-background-color:var(--brand);
-  --header-text-color:var(--text-on-brand);
+  --header-text-color:var(--brand-contrast-text);
   font-family: var(--theme-font);
   background-color: #121414;
   color: #757575;
@@ -778,13 +814,13 @@ a.btn-link:hover {
   color: var(--dark-text);
 }
 .dark .list-section-heading {
-  color: var(--text-on-brand);
+  color: var(--brand-contrast-text);
 }
 .dark .list-caption {
   color: #777;
 }
 .dark .list-overline {
-  color: var(--text-on-brand);
+  color: var(--brand-contrast-text);
 }
 .dark .menuitem a, .dark .menuitem button {
   color: #9ea0a1;
@@ -797,7 +833,7 @@ a.btn-link:hover {
   cursor: help;
 }
 
-.dark, .raleway, .oswald, .quicksand, .sitevision, .fancy, .code {
+.dark, .raleway, .oswald, .quicksand, .sitevision, .fancy, .code, .roboto {
   transition: all 0.5s;
 }
 
@@ -827,16 +863,16 @@ a.btn-link:hover {
   margin-bottom: 2em;
 }
 .newsAndBlock .brandBlock svg {
-  fill: var(--text-on-brand);
+  fill: var(--brand-contrast-text);
   margin: 0 auto;
 }
 .newsAndBlock .brandBlock .list-text, .newsAndBlock .brandBlock .list-title, .newsAndBlock .brandBlock .list-overline {
-  color: var(--text-on-brand);
+  color: var(--brand-contrast-text);
 }
 .newsAndBlock .brandBlock .list-title {
   margin-bottom: 0.25em;
 }
 
 label, legend {
-  font-family: "code saver";
+  font-family: "Inconsolata";
 }/*# sourceMappingURL=list.css.map */
