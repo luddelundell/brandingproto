@@ -24,6 +24,11 @@
   --theme-font: "Assistant";
   --header-background-color:#fff;
   --header-text-color: var(--brand);
+  --footer-background-color:var(--brand-complement);
+  --footer-text-color: var(--brand-complement-contrast-text);
+  --brand10:#802d7910;
+  --brand20:#802d7920;
+  --brand40:#802d7940;
 }
 
 body {
@@ -95,8 +100,8 @@ header .personal-menu span {
 }
 
 footer {
-  background-color: var(--brand-complement);
-  color: var(--brand-complement-contrast-text);
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
   padding: 2em;
 }
 
@@ -284,6 +289,45 @@ ul.listing.groups li:first-child {
   box-shadow: 0 0 1px red;
 }
 
+.poll {
+  padding: 0.5em 2em;
+}
+.poll.list-text {
+  margin: 0 !important;
+  line-height: 0.6;
+}
+.poll__bar {
+  border-radius: var(--border-radius);
+  border-radius: var(--border-radius);
+  background-color: var(--brand10);
+  position: relative;
+  margin-bottom: 10px;
+}
+.poll__bar__progress {
+  background-color: var(--brand20);
+  height: 40px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  position: relative;
+}
+.poll__bar__label {
+  position: absolute;
+  top: 0;
+  padding: 1em;
+}
+.poll__bar__value {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1em;
+}
+.poll__bar.winner {
+  font-weight: 600;
+}
+.poll__bar.winner .poll__bar__progress {
+  background-color: var(--brand40);
+}
+
 .buttons {
   margin: 1em 0;
 }
@@ -314,14 +358,6 @@ ul.listing.groups li:first-child {
   background-color: var(--brand-complement-dark);
 }
 
-a.btn-link {
-  font-weight: 500;
-  color: var(--text);
-}
-a.btn-link:hover {
-  color: var(--link);
-}
-
 .inlagg__chips {
   padding: 0.5em 2em;
   display: flex;
@@ -350,7 +386,6 @@ a.btn-link:hover {
 .inlagg__buttons button {
   cursor: pointer;
   transition: background-color 0.3s;
-  color: var(--text);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -358,8 +393,6 @@ a.btn-link:hover {
   flex-grow: 1;
   background-color: transparent;
   padding: 1em 0;
-  font-size: 1em;
-  font-family: var(--theme-font);
 }
 .inlagg__buttons button:hover {
   background-color: var(--hover-background-color);
@@ -547,9 +580,21 @@ a.btn-link:hover {
   font-weight: 500;
 }
 
+.list-context-button {
+  font-weight: 500;
+  font-size: 1em;
+  font-family: var(--theme-font);
+}
+.list-context-button:hover {
+  color: var(--hover-background-color);
+}
+
 .fancy {
   background-color: #f9f9f9;
   --brand: #0e726d;
+  --brand10:#0e726d10;
+  --brand20:#0e726d20;
+  --brand40:#0e726d40;
   --brand-dark: #0b5a56;
   --brand-contrast-text: #f5ecfd;
   --brand-complement: #72680e;
@@ -582,11 +627,9 @@ a.btn-link:hover {
 .fancy .list-lead {
   font-size: 120%;
   font-weight: 300;
-  line-height: 1.5;
 }
 .fancy .list-text {
   font-weight: 400;
-  line-height: 1.5;
 }
 .fancy .list-caption {
   color: #303626;
@@ -601,6 +644,9 @@ a.btn-link:hover {
 
 .sitevision {
   --brand: #17CC78;
+  --brand10: #17CC7810;
+  --brand20: #17CC7820;
+  --brand40: #17CC7840;
   --brand-complement:#824FFA;
   --brand-contrast-text: #e7faf1;
   --border-radius:18px;
@@ -646,15 +692,27 @@ a.btn-link:hover {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.sitevision .list-button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
 
 .quicksand {
-  --brand: #2c3542;
-  --brand-contrast-text: #b8cae6;
+  --brand: #ff7b00;
+  --brand10:#ff7b0010;
+  --brand20:#ff7b0020;
+  --brand40:#ff7b0040;
+  --brand-dark: #0b5a56;
+  --brand-complement:#0e1d36;
+  --brand-contrast-text: #0e1d36;
   --border-radius:10px;
   --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
   --profile-image-radius: 12px;
+  --header-background-color:#0e1d36;
+  --header-text-color:#ff7b00;
   --theme-font: "Quicksand";
   font-family: var(--theme-font);
+  --footer-background-color:var(--brand);
 }
 .quicksand .list-title {
   font-weight: 300;
@@ -676,6 +734,9 @@ a.btn-link:hover {
 
 .roboto {
   --brand: #924642;
+  --brand10:#92464210;
+  --brand20:#92464220;
+  --brand40:#92464240;
   --brand-complement:#F4EFF4;
   --brand-complement-contrast-text: var(--brand);
   --brand-contrast-text: #FCEDEA;
@@ -827,7 +888,7 @@ a.btn-link:hover {
 }
 
 .examples {
-  height: 300px;
+  height: 400px;
 }
 .examples p:hover {
   cursor: help;

@@ -24,6 +24,11 @@
     --theme-font:  'Assistant';
     --header-background-color:#fff;
     --header-text-color: var(--brand);
+    --footer-background-color:var(--brand-complement);
+    --footer-text-color: var(--brand-complement-contrast-text);
+    --brand10:#802d7910;
+    --brand20:#802d7920;
+    --brand40:#802d7940;
 }
 body {
     font-family: var(--theme-font);
@@ -102,8 +107,8 @@ header {
     }
 }
 footer {
-    background-color: var(--brand-complement);
-    color: var(--brand-complement-contrast-text);
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
     padding:2em;
 }
 .container {
@@ -286,6 +291,47 @@ ul.listing {
     background-color: #FFC72C80 !important;
     box-shadow: 0 0 1px red;
 }
+.poll {
+    &.list-text {
+        margin: 0 !important;
+        line-height: .6;
+    }
+    padding: 0.5em 2em;
+    // margin:1em 0;
+    &__bar {
+        border-radius: var(--border-radius);
+        border-radius: var(--border-radius);
+        background-color: var(--brand10);
+        position: relative;
+        margin-bottom: 10px;
+ 
+        &__progress {
+            background-color: var(--brand20);
+            height:40px;
+            border-top-left-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+            //z-index: 1;
+            position: relative;
+        }
+        &__label {
+            position: absolute;
+            top:0;
+            padding:1em;
+        }
+        &__value {
+            position: absolute;
+            right:0;
+            top:0;
+            padding: 1em;
+        }
+        &.winner {
+            font-weight: 600;            
+            .poll__bar__progress {
+                background-color: var(--brand40);
+            }
+        }
+    }
+}
 .buttons {
     margin: 1em 0;
 }
@@ -312,13 +358,7 @@ ul.listing {
         }
     }
 }
-a.btn-link {
-    font-weight: 500;
-    color: var(--text);
-    &:hover {
-        color:var(--link);
-    }
-}
+
 .inlagg__chips {
     padding:.5em 2em;  
     display: flex;
@@ -345,14 +385,14 @@ a.btn-link {
     button {
         cursor: pointer;
         transition: background-color .3s;
-        color: var(--text);
+        // color: var(--text);
         appearance: none;
         border:none;
         flex-grow: 1;
         background-color: transparent;
         padding:1em 0;
-        font-size: 1em;
-        font-family: var(--theme-font);
+        // font-size: 1em;
+        // font-family: var(--theme-font);
         &:hover {
             background-color: var(--hover-background-color);
            
@@ -540,9 +580,22 @@ a.btn-link {
     text-transform: none;
     font-weight:500;
 }
+.list-context-button{
+    font-weight: 500;
+    font-size: 1em;
+    font-family: var(--theme-font);
+    
+    &:hover {
+        color:var(--hover-background-color);
+    }
+}
+
 .fancy {
     background-color: #f9f9f9;
     --brand: #0e726d;
+    --brand10:#0e726d10;
+    --brand20:#0e726d20;
+    --brand40:#0e726d40;
     --brand-dark: #0b5a56;
     --brand-contrast-text: #f5ecfd;
     --brand-complement: #72680e;
@@ -575,11 +628,11 @@ a.btn-link {
     .list-lead {
         font-size: 120%;
         font-weight: 300;
-        line-height: 1.5;
+  
     }
     .list-text {
         font-weight: 400;
-        line-height: 1.5;
+       
     }
     .list-caption {
         color: rgb(48, 54, 38);
@@ -594,6 +647,9 @@ a.btn-link {
 }
 .sitevision {
     --brand: #17CC78;
+    --brand10: #17CC7810;
+    --brand20: #17CC7820;
+    --brand40: #17CC7840;
     --brand-complement:#824FFA;
     --brand-contrast-text: #e7faf1;
     --border-radius:18px;
@@ -638,15 +694,28 @@ a.btn-link {
           letter-spacing: .1em;
         text-transform: uppercase;
     }
+    .list-button {
+        text-transform: uppercase;
+        letter-spacing: .15em;
+    }
+
 }
 .quicksand {
-    --brand: #2c3542;
-    --brand-contrast-text: #b8cae6;
+    --brand: #ff7b00;
+    --brand10:#ff7b0010;
+    --brand20:#ff7b0020;
+    --brand40:#ff7b0040;
+    --brand-dark: #0b5a56;
+    --brand-complement:#0e1d36;
+    --brand-contrast-text: #0e1d36;
     --border-radius:10px;
     --box-shadow: 3px 3px 3px rgba(100,100,100,.126);
     --profile-image-radius: 12px;
+    --header-background-color:#0e1d36;
+    --header-text-color:#ff7b00;
     --theme-font: 'Quicksand';
     font-family: var(--theme-font);
+    --footer-background-color:var(--brand);
     .list-title {
        
         font-weight: 300;
@@ -670,6 +739,9 @@ a.btn-link {
 }
 .roboto {
     --brand: #924642;
+    --brand10:#92464210;
+    --brand20:#92464220;
+    --brand40:#92464240;
     --brand-complement:#F4EFF4;
     --brand-complement-contrast-text: var(--brand);
     --brand-contrast-text: #FCEDEA;
@@ -843,7 +915,7 @@ a.btn-link {
     }
 }
 .examples {
-    height:300px;
+    height:400px;
     p:hover {
         cursor:help;
     }
