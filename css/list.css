@@ -864,6 +864,8 @@ ul.listing.groups li:first-child {
 
 .dark {
   --brand: #1BDFCB;
+  --brand-dark:#18C7B5;
+  --brand-complement-dark:#B489E8;
   --brand10: #1BDFCB10;
   --brand20: #1BDFCB20;
   --brand40: #1BDFCB40;
