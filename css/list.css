@@ -28,7 +28,13 @@
   --footer-text-color: var(--brand-complement-contrast-text);
   --brand10:#802d7910;
   --brand20:#802d7920;
+  --brand30:#802d7920;
   --brand40:#802d7940;
+  --brand50:#802d7920;
+  --brand60:#802d7920;
+  --brand70:#802d7920;
+  --brand80:#802d7920;
+  --brand90:#802d7920;
 }
 
 body {
@@ -605,7 +611,7 @@ ul.listing.groups li:first-child {
   --header-background-color:var(--brand);
   --header-text-color:var(--brand-contrast-text);
   --hover-background-color: #0e726d15;
-  font-family: var(var(--theme-font));
+  font-family: var(--theme-font);
 }
 .fancy .logo {
   font-family: "Merriweather";
@@ -857,22 +863,29 @@ ul.listing.groups li:first-child {
 }
 
 .dark {
-  --brand: hsl(192, 53%, 7%);
-  --brand-contrast-text: hsl(205, 10%, 51%);
+  --brand: #1BDFCB;
+  --brand10: #1BDFCB10;
+  --brand20: #1BDFCB20;
+  --brand40: #1BDFCB40;
+  --brand-complement:#C495FD;
+  --brand-contrast-text: #000600;
+  --brand-complement-contrast-text: var(--brand-contrast-text);
   --border-color: #363636;
-  --hover-background-color:hsl(231, 9%, 14%);
+  --hover-background-color:#21212150;
   --border-radius:4px;
   --box-shadow: 0 0 6px rgba(0,0,0,.126);
   --profile-image-radius: 12px;
   --theme-font: "Mada";
-  --card-background: rgb(28, 31, 32);
-  --text: #757575;
+  --card-background: #2E2E2E;
+  --text: #E3E3E3;
   --dark-text: #999999;
-  --header-background-color:var(--brand);
-  --header-text-color:var(--brand-contrast-text);
+  --header-background-color: #272727;
+  --footer-background-color: var(--brand-complement);
+  --header-text-color:var(--text);
+  --footer-text-color: var(--brand-contrast-text);
   font-family: var(--theme-font);
-  background-color: #121414;
-  color: #757575;
+  background-color: #212121;
+  color: #E3E3E3;
 }
 .dark img {
   opacity: 0.75;
@@ -881,19 +894,25 @@ ul.listing.groups li:first-child {
   background-color: #111;
 }
 .dark .list-subtitle {
-  color: var(--dark-text);
+  color: var(--text);
 }
 .dark .list-section-heading {
-  color: var(--brand-contrast-text);
+  color: var(--brand);
+}
+.dark .list-lead {
+  color: var(--text);
+}
+.dark .list-text {
+  color: var(--text);
 }
 .dark .list-caption {
-  color: #777;
+  color: #E3E3E360;
 }
 .dark .list-overline {
-  color: var(--brand-contrast-text);
+  color: var(--brand);
 }
 .dark .menuitem a, .dark .menuitem button {
-  color: #9ea0a1;
+  color: var(--text);
 }
 
 .examples {

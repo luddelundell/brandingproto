@@ -1,5 +1,8 @@
 $(document).ready(function(){
+
+
     $('input[type=radio][name=style]').change(function() {
+
         var styleType = $(this).val();
         $('body').removeClass();
         if (styleType !== 'standard') {
@@ -18,6 +21,7 @@ $(document).ready(function(){
         $(this).parent().find('ul').slideToggle();
         $(this).parent().toggleClass('expanded');
     });
+
     // function setBrand(){
     //     var brand10 = $(':root').css('--brand')+'10';
     //     var brand20 = $(':root').css('--brand')+'20';
