@@ -600,25 +600,25 @@ ul.listing {
 }
 
 .fancy {
-    background-color: #E7ECE8;
-    --brand: #108a84;
-    --brand10:#108a8410;
-    --brand20:#108a8420;
-    --brand40:#108a8440;
+    background-color: #f0f0f0;
+    --brand: #472975;
+    --brand10:#47297510;
+    --brand20:#47297520;
+    --brand40:#47297540;
     --brand-dark: #CE984F;
-    --brand-contrast-text: #E7ECE8;
-    --brand-complement: #003E3B;
+    --brand-contrast-text: #FFB5D4;
+    --brand-complement: #FFB5D4;
     --brand-complement-dark: #524a09;
-    --brand-complement-contrast-text: #f5ecfd;
+    --brand-complement-contrast-text: var(--brand);
     --border-radius:2px;
     // --box-shadow:  12px 12px 24px rgba(207, 207, 207, .35), -6px -6px 12px #ffffff;
     --card-background:#fefefe;
     --profile-image-radius: 50%;
     --theme-font:  'Fira Sans';
-    --header-background-color:#003E3B;
-    --header-text-color:#E7ECE8;
+    --header-background-color:#FFB5D4;
+    --header-text-color:var(--brand);
     --hover-background-color: var(--brand10);
-    --footer-background-color:#003E3B;
+    --footer-background-color:var(--brand);
     --footer-text-color:#E7ECE8;
     font-family: var(--theme-font);
     .logo {
@@ -855,32 +855,40 @@ ul.listing {
     }
 }
 .browser {
-    --brand: #193d1e;
-    --brand10:#0000ff10;
-    --brand20:#0000ff20;
-    --brand40:#0000ff40;
-    --brand-complement:orange;
+    --brand: #2C3C4F;
+    --brand10:#2C3C4F10;
+    --brand20:#2C3C4F20;
+    --brand40:#2C3C4F40;
+    --brand-complement:#00BAA0;
     --brand-dark:darkblue;
     --brand-contrast-text: lightblue;
     --text:#000;
     --brand-complement-contrast-text: rgb(0, 0, 0);
     --border-radius:4px;
-    --box-shadow: 3px 3px 3px #193d1e;
+    --box-shadow: 3px 3px 3px #193d1e10;
     --profile-image-radius: 12px;
-    --card-background:#a7d3ad;
+    --hover-background-color:var(--brand10);
+    --card-background:#ffffff;
     --theme-font: 'sans-serif';
+    --header-background-color:#F4BA5D;
+    --header-text-color: #2C3C4F;
+    --footer-background-color:#00BAA0;
+    --footer-text-color:#bcfcf3;
     font-family: var(--theme-font);
-    background-color: #2c6634;
+    background-color: var(--brand10);
     .list-title {
-  font-family: 'serif';
+        font-family: 'serif';
         font-weight: 300;
     }
     .list-subtitle {
         font-weight: 600;
         font-family: sans-serif;
     }
+    .list-menu-item, .list-app-label {
+        font-family: sans-serif;
+    }
     .menuitem a {
-        font-family: 'serif';
+        font-family: 'sans-serif';
     }
     .list-text {
         font-weight: 300;
@@ -889,13 +897,14 @@ ul.listing {
     .list-caption {
         color: rgb(77, 66, 66);
         font-weight: 400;
-        font-family: sans-serif;
+        font-family: 'sans-serif';
     }
     .list-overline {
         font-family: 'serif';
           letter-spacing: .15em;
         text-transform: uppercase;
     }
+
 }
 .code {
     --brand: #242424;
