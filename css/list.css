@@ -25,15 +25,15 @@
   --card-background:#fff;
   --profile-image-radius: 4px;
   --theme-font: "Assistant";
-  --header-background-color:var(--brand);
-  --header-text-color: var(--brand05);
+  --header-background-color:#efefef;
+  --header-text-color: var(--brand);
   --footer-background-color:var(--brand-complement);
   --footer-text-color: var(--brand-complement-contrast-text);
-  --brand05: hsl(var(--brand-h),var(--brand-s),calc(var(--brand-l) + 52%));
-  --brand10: hsl(var(--brand-h),var(--brand-s),calc(var(--brand-l) + 50%));
-  --brand20: hsl(var(--brand-h),var(--brand-s),calc(var(--brand-l) + 45%));
-  --brand40: hsl(var(--brand-h),var(--brand-s),calc(var(--brand-l) + 35%));
-  --brand80: hsl(var(--brand-h),var(--brand-s),calc(var(--brand-l) - 15%));
+  --brand05: hsl(var(--brand-h),var(--brand-s), 98%);
+  --brand10: hsl(var(--brand-h),var(--brand-s), 97%);
+  --brand20: hsl(var(--brand-h),var(--brand-s), 85%);
+  --brand40: hsl(var(--brand-h),var(--brand-s), 75%);
+  --brand80: hsl(var(--brand-h),var(--brand-s), 20%);
 }
 
 body {
@@ -85,9 +85,10 @@ body {
 
 header {
   display: flex;
-  padding: 1.5em 2em;
+  padding-left: 2em;
   background-color: var(--header-background-color);
   align-items: center;
+  gap: 2em;
 }
 header p {
   color: var(--header-text-color);
@@ -108,23 +109,43 @@ header nav a.active {
   border-bottom: 2px solid var(--header-text-color);
 }
 header nav a:hover {
-  background-color: var(--hover-background-color);
   background-color: var(--brand80);
   color: var(--header-text-color);
   text-decoration: none;
 }
+header .tools-and-menu {
+  display: flex;
+  align-items: center;
+  background-color: var(--brand);
+  color: var(--brand-contrast-text);
+  padding: 1em 2em;
+}
 header .tools {
-  color: var(--header-text-color);
-  margin-left: 4em;
+  display: flex;
+  gap: 1em;
+}
+header .tools a {
+  color: var(--brand-contrast-text);
+  text-align: center;
+  line-height: 44px;
+  height: 44px;
+  width: 44px;
+  display: inline-block;
+  border-radius: 50%;
+}
+header .tools a:hover {
+  background-color: var(--brand80);
+  text-decoration: none;
 }
 header .tools .icon {
   font-family: "icomoon";
   font-size: 24px;
-  margin-left: 1em;
-  color: var(--header-text-color);
+  margin-left: 1.5em;
+}
+header .tools .icon:first-child {
+  margin: 0;
 }
 header .personal-menu {
-  color: var(--header-text-color);
   margin-left: 2em;
   display: flex;
   gap: 0.5em;
@@ -602,6 +623,12 @@ ul.listing.groups li:first-child {
   color: var(--link);
 }
 
+.list-text-small {
+  font-size: 0.875em;
+  color: var(--text);
+  font-weight: 600;
+}
+
 .list-caption {
   color: var(--caption);
   font-size: 0.875em;
@@ -634,6 +661,7 @@ ul.listing.groups li:first-child {
   --brand10:#47297510;
   --brand20:#47297520;
   --brand40:#47297540;
+  --brand80: hsl(335, 100%, 80%);
   --brand-dark: #CE984F;
   --brand-contrast-text: #FFB5D4;
   --brand-complement: #FFB5D4;
@@ -703,6 +731,7 @@ ul.listing.groups li:first-child {
   --footer-background-color:var(--brand-complement);
   --footer-text-color:var(--brand-complement-contrast-text);
   font-family: var(--theme-font);
+  background-color: #f7f8f9;
 }
 .sitevision .list-title {
   font-family: "Frank Ruhl libre";
