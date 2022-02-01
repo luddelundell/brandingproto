@@ -40,12 +40,49 @@
 
 
 
+
 }
 body {
     font-family: var(--theme-font);
     background: var(--brand05);
     color:#202330;
     line-height: 1.5;
+}
+.color-example {
+    &__color {
+        height:20px;
+        width:200px;
+    }
+    .c10 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 10%);
+    }
+    .c20 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 20%);
+    }
+    .c30 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 30%);
+    }
+    .c40 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 40%);
+    }
+    .c50 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 50%);
+    }
+    .c60 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 60%);
+    }
+    .c70 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 70%);
+    }
+    .c80 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 80%);
+    }
+    .c90 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 95%);
+    }
+    .c100 {
+        background-color: hsl(var(--brand-h), var(--brand-s), 97%);
+    }
 }
 @mixin card {
     border-radius: var(--border-radius);

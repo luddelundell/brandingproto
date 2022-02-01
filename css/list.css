@@ -43,6 +43,41 @@ body {
   line-height: 1.5;
 }
 
+.color-example__color {
+  height: 20px;
+  width: 200px;
+}
+.color-example .c10 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 10%);
+}
+.color-example .c20 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 20%);
+}
+.color-example .c30 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 30%);
+}
+.color-example .c40 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 40%);
+}
+.color-example .c50 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 50%);
+}
+.color-example .c60 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 60%);
+}
+.color-example .c70 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 70%);
+}
+.color-example .c80 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 80%);
+}
+.color-example .c90 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 95%);
+}
+.color-example .c100 {
+  background-color: hsl(var(--brand-h), var(--brand-s), 97%);
+}
+
 * {
   margin: 0;
   padding: 0;
