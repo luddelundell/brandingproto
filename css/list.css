@@ -4,9 +4,9 @@
   src: url(icomoon.woff);
 }
 :root {
-  --brand-h:244;
-  --brand-s:45%;
-  --brand-l:46%;
+  --brand-h:184;
+  --brand-s:33%;
+  --brand-l:48%;
   --brand: hsl(var(--brand-h),var(--brand-s), var(--brand-l));
   --brand-dark: var(--brand80);
   --brand-complement: hsl(calc(var(--brand-h) / 2),var(--brand-s),var(--brand-l));
