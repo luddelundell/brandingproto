@@ -109,7 +109,8 @@ header nav a.active {
 }
 header nav a:hover {
   background-color: var(--hover-background-color);
-  color: var(--brand);
+  background-color: var(--brand80);
+  color: var(--header-text-color);
   text-decoration: none;
 }
 header .tools {
