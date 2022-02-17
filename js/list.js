@@ -7,40 +7,31 @@ $(document).ready(function(){
         $(':root').css('--brand-l', hsl[2]+'%' );
         // $(':root').css('--brand-complement', 'hsl('+hsl[0]/2+','+hsl[1]+'%,'+hsl[2]+'%)');
         var pickerColor = $(this).val().slice(1,7);
-        var brc = '#'+ invertHex(pickerColor);
-        $(':root').css('--brand-complement', brc );
+        var brc = invertHex(pickerColor);
+        var brcH = '#'+ invertHex(pickerColor);
+        $(':root').css('--brand-complement', brcH );
         $('.color-val').text($(this).val());
 
         $.getJSON("https://webaim.org/resources/contrastchecker/?fcolor="+pickerColor+"&bcolor=FFFFFF&api", function(w){
-        var q = "pass";
-    
-        $("#foo").append("<p>Ratio: " +w.ratio + " vs. #FFFFFF</p>");
-        if (w.AA == 'pass') {q="pass"} else {q="fail"}
-        $("#foo").append("<p class='"+q+"'>AA: " +w.AA + "</p>");
+          var q = "pass";    
+          $("#foo").append("<p>Ratio: " +w.ratio + " vs. #FFFFFF</p>");
+          if (w.AA == 'pass') {q="pass"} else {q="fail"}
+          $("#foo").append("<p class='"+q+"'>AA: " +w.AA + "</p>");
+        });
 
+        $.getJSON("https://webaim.org/resources/contrastchecker/?fcolor="+pickerColor+"&bcolor=000000&api", function(b){
+          var q = "pass";  
+          $("#foo").append("<p>Ratio: " +b.ratio + " vs. #000000</p>");
+          if (b.AA == 'pass') {q="pass"} else {q="fail"}
+          $("#foo").append("<p class='"+q+"'>AA: " +b.AA + "</p>");
+        });
 
-        
-        // if (w.AALarge == 'pass') {q="pass"} else {q="fail"}
-        // $("#foo").append("<p class='"+q+"'>AA Large: " +w.AALarge + "</p>");
-        // if (w.AAA == 'pass') {q="pass"} else {q="fail"}
-        // $("#foo").append("<p class='"+q+"'>AAA: " +w.AAA + "</p>");
-        // if (w.AAALarge == 'pass') {q="pass"} else {q="fail"}
-        // $("#foo").append("<p class='"+q+"'>AAA Large: " +w.AAALarge + "</p>");
-    });
-
-    $.getJSON("https://webaim.org/resources/contrastchecker/?fcolor="+pickerColor+"&bcolor=000000&api", function(b){
-      var q = "pass";
-  
-      $("#foo").append("<p>Ratio: " +b.ratio + " vs. #000000</p>");
-      if (b.AA == 'pass') {q="pass"} else {q="fail"}
-      $("#foo").append("<p class='"+q+"'>AA: " +b.AA + "</p>");
-      // if (b.AALarge == 'pass') {q="pass"} else {q="fail"}
-      // $("#foo").append("<p class='"+q+"'>AA Large: " +b.AALarge + "</p>");
-      // if (b.AAA == 'pass') {q="pass"} else {q="fail"}
-      // $("#foo").append("<p class='"+q+"'>AAA: " +b.AAA + "</p>");
-      // if (b.AAALarge == 'pass') {q="pass"} else {q="fail"}
-      // $("#foo").append("<p class='"+q+"'>AAA Large: " +b.AAALarge + "</p>");
-  });
+        // $.getJSON("https://webaim.org/resources/contrastchecker/?fcolor="+pickerColor+"&bcolor="+brc+"&api", function(b){
+        //   var q = "pass";  
+        //   $("#foo").append("<p>Ratio: " +b.ratio + " vs. "+brc+"</p>");
+        //   if (b.AA == 'pass') {q="pass"} else {q="fail"}
+        //   $("#foo").append("<p class='"+q+"'>AA: " +b.AA + "</p>");
+        // });
     })
 
     $('input[type=radio][name=style]').change(function() {
@@ -49,7 +40,11 @@ $(document).ready(function(){
         $('body').removeClass();
         if (styleType !== 'standard') {
             $('body').addClass(styleType);
+            $('#standardColors').hide();
         }               
+        else {
+          $('#standardColors').show();
+        }
         
     });
     $('.showcase').mouseenter(function(){

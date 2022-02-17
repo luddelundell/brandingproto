@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200;300;400;500;600;700;800&family=Encode+Sans:wght@100;200;300;400;500;600;700;800&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Inconsolata:wght@300;400;500;600;700;800&family=Inter:wght@200;300;400;500;600;700&family=Lora:wght@400;500;600&family=Mada:wght@200;300;400;500;600;700;900&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200;300;400;500;600;700;800&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Inconsolata:wght@300;400;500;600;700;800&family=Inter:wght@200;300;400;500;600;700&family=Lora:wght@400;500;600&family=Mada:wght@200;300;400;500;600;700;900&family=Merriweather:wght@300;400;700;900&family=Oswald:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap");
 @font-face {
   font-family: streamline;
   src: url(streamline.woff);
@@ -30,15 +30,18 @@
   --header-text-color: var(--brand);
   --footer-background-color:var(--brand-complement);
   --footer-text-color: var(--brand-complement-contrast-text);
-  --brand05: hsl(var(--brand-h),var(--brand-s), 98%);
-  --brand10: hsl(var(--brand-h),var(--brand-s), 97%);
-  --brand20: hsl(var(--brand-h),var(--brand-s), 85%);
-  --brand40: hsl(var(--brand-h),var(--brand-s), 75%);
-  --brand80: hsl(var(--brand-h),var(--brand-s), 20%);
+  
+  --brand10: hsl(var(--brand-h),var(--brand-s), 98%);
+  --brand20: hsl(var(--brand-h),var(--brand-s), 96%);
+  --brand30: hsl(var(--brand-h),var(--brand-s), 87%);
+  --brand40: hsl(var(--brand-h),var(--brand-s), 80%);
+  --brand50: hsl(var(--brand-h),var(--brand-s), 68%);
+  --brand60: hsl(var(--brand-h),var(--brand-s), 55%);
+  --brand70: hsl(var(--brand-h),var(--brand-s), 45%);
+  --brand80: hsl(var(--brand-h),var(--brand-s), 30%);
+  --brand90: hsl(var(--brand-h),var(--brand-s), 15%);
 }
-.standard {
-  --header-background-color: var(--brand10);
-}
+
 .selector {
   padding: 2em;
   border: 1px solid var(--color);
@@ -50,7 +53,40 @@ body {
   color: #202330;
   line-height: 1.5;
 }
-
+.b {
+  padding:.5em 1em;
+}
+.b100 {
+  background-color: var(--brand10);
+}
+.b200 {
+  background-color: var(--brand20);
+}
+.b300 {
+  background-color: var(--brand30);
+}
+.b400 {
+  background-color: var(--brand40);
+}
+.b500 {
+  background-color: var(--brand50);
+}
+.b600 {
+  background-color: var(--brand60);
+  color:white;
+}
+.b700 {
+  background-color: var(--brand70);
+  color:white;
+}
+.b800 {
+  background-color: var(--brand80);
+  color:white;
+}
+.b900 {
+  background-color: var(--brand90);
+  color:white;
+}
 .color-example__color {
   height: 20px;
   width: 200px;
@@ -95,11 +131,9 @@ header {
   display: flex;
   padding-left: 2em;
   background-color: var(--header-background-color);
-   /* background-color: var(--brand10); */
   align-items: center;
   gap: 2em;
 }
-
 header p {
   color: var(--header-text-color);
   font-size: 1.5em;
@@ -240,7 +274,16 @@ aside {
   padding: 2em;
   padding-top: 0.75em;
 }
-
+.pass, .fail {
+  padding:.5em;
+  color:#fff;
+}
+.pass {
+  background-color: green;
+}
+.fail {
+  background-color: red;
+}
 .card-popover {
   width: 375px;
   border-top: 4px solid var(--brand);
@@ -262,7 +305,9 @@ aside {
   transform: rotate(45deg);
   border-radius: 4px;
 }
-
+.icon {
+  font-family: 'Streamline';
+}
 .muted {
   opacity: 0.65;
 }
@@ -1049,16 +1094,7 @@ ul.listing.groups li:first-child {
 .dark .menuitem a, .dark .menuitem button {
   color: var(--text);
 }
-.pass, .fail {
-  padding:8px;
-  color:#fff;
-}
-.pass {
-  background-color:#3CBF3C;
-}
-.fail {
-  background-color: #DB3F3F;
-}
+
 .examples {
   height: 400px;
 }
