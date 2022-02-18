@@ -40,6 +40,9 @@
   --brand70: hsl(var(--brand-h),var(--brand-s), 45%);
   --brand80: hsl(var(--brand-h),var(--brand-s), 30%);
   --brand90: hsl(var(--brand-h),var(--brand-s), 15%);
+  --poll1: #529DA310;
+  --poll2: #529DA320;
+  --poll3: #529DA340;
 }
 
 .selector {
@@ -429,12 +432,12 @@ ul.listing.groups li:first-child {
 .poll__bar {
   border-radius: var(--border-radius);
   border-radius: var(--border-radius);
-  background-color: var(--brand10);
+  background-color: var(--poll1);
   position: relative;
   margin-bottom: 10px;
 }
 .poll__bar__progress {
-  background-color: var(--brand20);
+  background-color: var(--poll2);
   height: 40px;
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
@@ -455,7 +458,7 @@ ul.listing.groups li:first-child {
   font-weight: 600;
 }
 .poll__bar.winner .poll__bar__progress {
-  background-color: var(--brand40);
+  background-color: var(--poll3);
 }
 
 .buttons {
@@ -1058,22 +1061,22 @@ ul.listing.groups li:first-child {
 }
 
 .dark {
-  --brand: #1BDFCB;
-  --brand-dark:#18C7B5;
+  --brand-h:144;
+  --brand-s:33%;
+  --brand-l:48%;
+  --brand: hsl(var(--brand-h),var(--brand-s), var(--brand-l));
+  --brand-dark: var(--brand80);
   --brand-complement-dark:#B489E8;
-  --brand10: #1BDFCB10;
-  --brand20: #1BDFCB20;
-  --brand40: #1BDFCB40;
+  --link: #4d82fe;
   --brand-complement:#C495FD;
-  --brand-contrast-text: #000600;
+  --brand-contrast-text: hsl(var(--brand-h),var(--brand-s), 90%);
   --brand-complement-contrast-text: var(--brand-contrast-text);
   --border-color: #363636;
-  --hover-background-color:#21212150;
+  --hover-background-color:var(--brand10);
   --border-radius:4px;
   --box-shadow: 0 0 6px rgba(0,0,0,.126);
   --profile-image-radius: 12px;
-  --theme-font: "Mada";
-  --card-background: #2E2E2E;
+  --card-background: #222;
   --text: #E3E3E3;
   --dark-text: #999999;
   --header-background-color: #272727;
@@ -1081,8 +1084,20 @@ ul.listing.groups li:first-child {
   --header-text-color:var(--text);
   --footer-text-color: var(--brand-contrast-text);
   font-family: var(--theme-font);
-  background-color: #212121;
-  color: #E3E3E3;
+  background-color: #161718;
+  color: #ededed;
+  --brand10: hsl(var(--brand-h),var(--brand-s), 15%);
+  --brand20: hsl(var(--brand-h),var(--brand-s), 30%);
+  --brand30: hsl(var(--brand-h),var(--brand-s), 45%);
+  --brand40: hsl(var(--brand-h),var(--brand-s), 55%);
+  --brand50: hsl(var(--brand-h),var(--brand-s), 68%);
+  --brand60: hsl(var(--brand-h),var(--brand-s), 80%);
+  --brand70: hsl(var(--brand-h),var(--brand-s), 87%);
+  --brand80: hsl(var(--brand-h),var(--brand-s), 96%);
+  --brand90: hsl(var(--brand-h),var(--brand-s), 98%);
+  --poll1: #529DA310;
+  --poll2: #529DA320;
+  --poll3: #529DA340;
 }
 .dark img {
   opacity: 0.75;
