@@ -17,9 +17,9 @@
     --brand-complement-contrast-text:hsl(calc(var(--brand-h) / 2),var(--brand-s),calc(var(--brand-l) + 52%));
     // --brand-complement-dark: hsl(306, 50%, 8%);
     // --brand-complement-contrast-text: var(--brand);
-    --brand-contrast-text: var(--brand10);
+    --brand-contrast-text: var(--brand100);
     --border-color: #eee;
-    --hover-background-color: var(--brand10);
+    --hover-background-color: var(--brand100);
     --subtitle: #202330;
     --text: #202330;
     --caption: #767676;
@@ -35,25 +35,18 @@
     --header-text-color: var(--brand);
     --footer-background-color:var(--brand-complement);
     --footer-text-color: var(--brand-complement-contrast-text);
-    --brand10: hsl(var(--brand-h),var(--brand-s), 98%);
-    --brand20: hsl(var(--brand-h),var(--brand-s), 96%);
-    --brand30: hsl(var(--brand-h),var(--brand-s), 87%);
-    --brand40: hsl(var(--brand-h),var(--brand-s), 80%);
-    --brand50: hsl(var(--brand-h),var(--brand-s), 68%);
-    --brand60: hsl(var(--brand-h),var(--brand-s), 55%);
-    --brand70: hsl(var(--brand-h),var(--brand-s), 45%);
-    --brand80: hsl(var(--brand-h),var(--brand-s), 30%);
-    --brand90: hsl(var(--brand-h),var(--brand-s), 15%);
-//   --poll1: hsl(var(--brand-h), 33%, 98%);
-//   --poll2: hsl(var(--brand-h), 33%, 90%);
-//   --poll3: hsl(var(--brand-h), 33%, 70%);
-
-//   --poll3: hsl(145, 16%, 88%);
-//   --poll2: hsl(145, 8%, 94%);
-//   --poll1:hsl(145, 3%, 98%);
---poll1: #529DA310;
---poll2: #529DA320;
---poll3: #529DA340;
+    --brand100: hsl(var(--brand-h),var(--brand-s), 98%);
+    --brand200: hsl(var(--brand-h),var(--brand-s), 96%);
+    --brand300: hsl(var(--brand-h),var(--brand-s), 87%);
+    --brand400: hsl(var(--brand-h),var(--brand-s), 80%);
+    --brand500: hsl(var(--brand-h),var(--brand-s), 68%);
+    --brand600: hsl(var(--brand-h),var(--brand-s), 55%);
+    --brand700: hsl(var(--brand-h),var(--brand-s), 45%);
+    --brand800: hsl(var(--brand-h),var(--brand-s), 30%);
+    --brand900: hsl(var(--brand-h),var(--brand-s), 15%);
+    --poll1: var(--brand100);
+    --poll2: var(--brand200);
+    --poll3: var(--brand400);
 
 }
 .selector {  
@@ -120,34 +113,34 @@ body {
     padding:.5em 1em;
   }
   .b100 {
-    background-color: var(--brand10);
+    background-color: var(--brand100);
   }
   .b200 {
-    background-color: var(--brand20);
+    background-color: var(--brand200);
   }
   .b300 {
-    background-color: var(--brand30);
+    background-color: var(--brand300);
   }
   .b400 {
-    background-color: var(--brand40);
+    background-color: var(--brand400);
   }
   .b500 {
-    background-color: var(--brand50);
+    background-color: var(--brand500);
   }
   .b600 {
-    background-color: var(--brand60);
+    background-color: var(--brand600);
     color:white;
   }
   .b700 {
-    background-color: var(--brand70);
+    background-color: var(--brand700);
     color:white;
   }
   .b800 {
-    background-color: var(--brand80);
+    background-color: var(--brand800);
     color:white;
   }
   .b900 {
-    background-color: var(--brand90);
+    background-color: var(--brand900);
     color:white;
   }
   
@@ -744,10 +737,10 @@ ul.listing {
 .fancy {
     background-color: #f0f0f0;
     --brand: #472975;
-    --brand10:#47297510;
-    --brand20:#47297520;
-    --brand40:#47297540;
-    --brand80: hsl(335, 100%, 80%);
+    --brand100:#47297510;
+    --brand200:#47297520;
+    --brand400:#47297540;
+    --brand800: hsl(335, 100%, 80%);
     --brand-dark: #CE984F;
     --brand-contrast-text: #FFB5D4;
     --brand-complement: #FFB5D4;
@@ -802,9 +795,12 @@ ul.listing {
 }
 .sitevision {
     --brand: #17CC78;
-    --brand10: #17CC7810;
-    --brand20: #17CC7820;
-    --brand40: #17CC7840;
+    --brand100: #17CC7810;
+    --brand200: #17CC7820;
+    --brand400: #17CC7840;
+    --poll1: var(--brand100);
+    --poll2: var(--brand200);
+    --poll3: var(--brand400);
     --brand-dark:hsl(152, 80%, 37%);
     --brand-complement:#824FFA;
     --brand-complement-dark: hsl(258, 94%, 57%);
@@ -863,9 +859,9 @@ ul.listing {
 }
 .quicksand {
     --brand: #ff7b00;
-    --brand10:#ff7b0010;
-    --brand20:#ff7b0020;
-    --brand40:#ff7b0040;
+    --brand100:#ff7b0010;
+    --brand200:#ff7b0020;
+    --brand400:#ff7b0040;
     --brand-dark: #0b5a56;
     --brand-complement:#0e1d36;
     --brand-contrast-text: #0e1d36;
@@ -901,9 +897,9 @@ ul.listing {
 .roboto {
     --brand: #924642;
     --brand-dark: hsl(3, 38%, 34%);
-    --brand10:#92464210;
-    --brand20:#92464220;
-    --brand40:#92464240;
+    --brand100:#92464210;
+    --brand200:#92464220;
+    --brand400:#92464240;
     --brand-complement:#F4EFF4;
     --brand-complement-dark:hsl(300, 19%, 87%);
     --brand-complement-contrast-text: var(--brand);
@@ -962,9 +958,9 @@ ul.listing {
 .raleway {
     background-color: #E8EAED;
     --brand: #6B38BA;
-    --brand10:#6B38BA10;
-    --brand20:#6B38BA20;
-    --brand40:#6B38BA40;
+    --brand100:#6B38BA10;
+    --brand200:#6B38BA20;
+    --brand400:#6B38BA40;
     --brand-contrast-text: #E4D8F7;
     --brand-complement:#E4D8F7;
     --brand-complement-contrast-text:var(--brand);
@@ -1001,9 +997,9 @@ ul.listing {
 }
 .browser {
     --brand: #2C3C4F;
-    --brand10:#2C3C4F10;
-    --brand20:#2C3C4F20;
-    --brand40:#2C3C4F40;
+    --brand100:#2C3C4F10;
+    --brand200:#2C3C4F20;
+    --brand400:#2C3C4F40;
     --brand-complement:#00BAA0;
     --brand-dark:darkblue;
     --brand-contrast-text: lightblue;
@@ -1053,9 +1049,9 @@ ul.listing {
 }
 .code {
     --brand: #242424;
-    --brand10:#44444410;
-    --brand20:#44444420;
-    --brand40:#44444440;
+    --brand100:#44444410;
+    --brand200:#44444420;
+    --brand400:#44444440;
     --brand-complement: #444445;
     --brand-dark: #0b5a56;
     --brand-contrast-text: #f1f1f1;
@@ -1103,7 +1099,7 @@ ul.listing {
     --brand-contrast-text: hsl(var(--brand-h),var(--brand-s), 90%);
     --brand-complement-contrast-text: var(--brand-contrast-text);
     --border-color: #363636;
-    --hover-background-color:var(--brand10);
+    --hover-background-color:var(--brand100);
     --border-radius:4px;
     --box-shadow: 0 0 6px rgba(0,0,0,.126);
     --profile-image-radius: 12px;
@@ -1129,19 +1125,23 @@ ul.listing {
     // --brand80: hsl(var(--brand-h),var(--brand-s), 30%);
     // --brand90: hsl(var(--brand-h),var(--brand-s), 15%);
 
-    --brand10: hsl(var(--brand-h),var(--brand-s), 15%);
-    --brand20: hsl(var(--brand-h),var(--brand-s), 30%);
-    --brand30: hsl(var(--brand-h),var(--brand-s), 45%);
-    --brand40: hsl(var(--brand-h),var(--brand-s), 55%);
-    --brand50: hsl(var(--brand-h),var(--brand-s), 68%);
-    --brand60: hsl(var(--brand-h),var(--brand-s), 80%);
-    --brand70: hsl(var(--brand-h),var(--brand-s), 87%);
-    --brand80: hsl(var(--brand-h),var(--brand-s), 96%);
-    --brand90: hsl(var(--brand-h),var(--brand-s), 98%);
+    --brand100: hsl(var(--brand-h),var(--brand-s), 15%);
+    --brand200: hsl(var(--brand-h),var(--brand-s), 30%);
+    --brand300: hsl(var(--brand-h),var(--brand-s), 45%);
+    --brand400: hsl(var(--brand-h),var(--brand-s), 55%);
+    --brand500: hsl(var(--brand-h),var(--brand-s), 68%);
+    --brand600: hsl(var(--brand-h),var(--brand-s), 80%);
+    --brand700: hsl(var(--brand-h),var(--brand-s), 87%);
+    --brand800: hsl(var(--brand-h),var(--brand-s), 96%);
+    --brand900: hsl(var(--brand-h),var(--brand-s), 98%);
 
-    --poll1: #529DA310;
-    --poll2: #529DA320;
-    --poll3: #529DA340;
+    // --poll1: #529DA310;
+    // --poll2: #529DA320;
+    // --poll3: #529DA340;
+
+    --poll1: var(--brand100);
+    --poll2: var(--brand200);
+    --poll3: var(--brand400);
     img {
         opacity: .75;
         // filter: grayscale(50%);
