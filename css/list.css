@@ -14,9 +14,9 @@
   --brand-complement: hsl(calc(var(--brand-h) / 2),var(--brand-s),var(--brand-l));
   --brand-complement-dark: hsl(calc(var(--brand-h) / 2),var(--brand-s),calc(var(--brand-l) - 15%));
   --brand-complement-contrast-text:hsl(calc(var(--brand-h) / 2),var(--brand-s),calc(var(--brand-l) + 52%));
-  --brand-contrast-text: var(--brand100);
+  --brand-contrast-text: var(--brand10);
   --border-color: #eee;
-  --hover-background-color: var(--brand100);
+  --hover-background-color: var(--brand10);
   --subtitle: #202330;
   --text: #202330;
   --caption: #767676;
@@ -31,18 +31,20 @@
   --header-text-color: var(--brand);
   --footer-background-color:var(--brand-complement);
   --footer-text-color: var(--brand-complement-contrast-text);
-  --brand100: hsl(var(--brand-h),var(--brand-s), 98%);
-  --brand200: hsl(var(--brand-h),var(--brand-s), 96%);
-  --brand300: hsl(var(--brand-h),var(--brand-s), 87%);
-  --brand400: hsl(var(--brand-h),var(--brand-s), 80%);
-  --brand500: hsl(var(--brand-h),var(--brand-s), 68%);
-  --brand600: hsl(var(--brand-h),var(--brand-s), 55%);
-  --brand700: hsl(var(--brand-h),var(--brand-s), 45%);
-  --brand800: hsl(var(--brand-h),var(--brand-s), 30%);
-  --brand900: hsl(var(--brand-h),var(--brand-s), 15%);
-  --poll1: var(--brand100);
-  --poll2: var(--brand200);
-  --poll3: var(--brand400);
+  --brand05: hsl(var(--brand-h),var(--brand-s), 98%);
+  --brand10: hsl(var(--brand-h),var(--brand-s), 96%);
+  --brand20: hsl(var(--brand-h),var(--brand-s), 87%);
+  --brand30: hsl(var(--brand-h),var(--brand-s), 80%);
+  --brand40: hsl(var(--brand-h),var(--brand-s), 68%);
+  --brand50: hsl(var(--brand-h),var(--brand-s), 55%);
+  --brand60: hsl(var(--brand-h),var(--brand-s), 45%);
+  --brand70: hsl(var(--brand-h),var(--brand-s), 30%);
+  --brand80: hsl(var(--brand-h),var(--brand-s), 17%);
+  --brand90: hsl(var(--brand-h),var(--brand-s), 12%);
+  --brand100:hsl(var(--brand-h),var(--brand-s), 10%);
+  --poll1: var(--brand10);
+  --poll2: var(--brand20);
+  --poll3: var(--brand40);
 }
 
 .selector {
@@ -101,43 +103,52 @@ body {
   padding: 0.5em 1em;
 }
 
+.b50 {
+  background-color: var(--brand05);
+}
+
 .b100 {
-  background-color: var(--brand100);
+  background-color: var(--brand10);
 }
 
 .b200 {
-  background-color: var(--brand200);
+  background-color: var(--brand20);
 }
 
 .b300 {
-  background-color: var(--brand300);
+  background-color: var(--brand30);
 }
 
 .b400 {
-  background-color: var(--brand400);
+  background-color: var(--brand40);
 }
 
 .b500 {
-  background-color: var(--brand500);
+  background-color: var(--brand50);
 }
 
 .b600 {
-  background-color: var(--brand600);
+  background-color: var(--brand60);
   color: white;
 }
 
 .b700 {
-  background-color: var(--brand700);
+  background-color: var(--brand70);
   color: white;
 }
 
 .b800 {
-  background-color: var(--brand800);
+  background-color: var(--brand80);
   color: white;
 }
 
 .b900 {
-  background-color: var(--brand900);
+  background-color: var(--brand90);
+  color: white;
+}
+
+.b1000 {
+  background-color: var(--brand100);
   color: white;
 }
 
@@ -418,7 +429,7 @@ ul.listing.groups li:first-child {
 }
 
 .hightlight {
-  background-color: #FFC72C80 !important;
+  background-color: rgba(255, 199, 44, 0.5019607843) !important;
   box-shadow: 0 0 1px red;
 }
 
@@ -670,6 +681,7 @@ ul.listing.groups li:first-child {
 .list-subtitle {
   color: var(--subtitle);
   font-weight: 500;
+  font-size: 1em;
 }
 .list-subtitle a:link:hover {
   color: var(--link);
@@ -729,10 +741,10 @@ ul.listing.groups li:first-child {
 .fancy {
   background-color: #f0f0f0;
   --brand: #472975;
-  --brand100:#47297510;
-  --brand200:#47297520;
-  --brand400:#47297540;
-  --brand800: hsl(335, 100%, 80%);
+  --brand10:#47297510;
+  --brand20:#47297520;
+  --brand40:#47297540;
+  --brand80: hsl(335, 100%, 80%);
   --brand-dark: #CE984F;
   --brand-contrast-text: #FFB5D4;
   --brand-complement: #FFB5D4;
@@ -785,12 +797,12 @@ ul.listing.groups li:first-child {
 
 .sitevision {
   --brand: #17CC78;
-  --brand100: #17CC7810;
-  --brand200: #17CC7820;
-  --brand400: #17CC7840;
-  --poll1: var(--brand100);
-  --poll2: var(--brand200);
-  --poll3: var(--brand400);
+  --brand10: #17CC7810;
+  --brand20: #17CC7820;
+  --brand40: #17CC7840;
+  --poll1: var(--brand10);
+  --poll2: var(--brand20);
+  --poll3: var(--brand40);
   --brand-dark:hsl(152, 80%, 37%);
   --brand-complement:#824FFA;
   --brand-complement-dark: hsl(258, 94%, 57%);
@@ -848,9 +860,9 @@ ul.listing.groups li:first-child {
 
 .quicksand {
   --brand: #ff7b00;
-  --brand100:#ff7b0010;
-  --brand200:#ff7b0020;
-  --brand400:#ff7b0040;
+  --brand10:#ff7b0010;
+  --brand20:#ff7b0020;
+  --brand40:#ff7b0040;
   --brand-dark: #0b5a56;
   --brand-complement:#0e1d36;
   --brand-contrast-text: #0e1d36;
@@ -873,7 +885,7 @@ ul.listing.groups li:first-child {
   font-weight: 400;
 }
 .quicksand .list-caption {
-  color: #5f0d0d;
+  color: rgb(95, 13, 13);
   font-weight: 400;
 }
 .quicksand .list-overline {
@@ -884,9 +896,9 @@ ul.listing.groups li:first-child {
 .roboto {
   --brand: #924642;
   --brand-dark: hsl(3, 38%, 34%);
-  --brand100:#92464210;
-  --brand200:#92464220;
-  --brand400:#92464240;
+  --brand10:#92464210;
+  --brand20:#92464220;
+  --brand40:#92464240;
   --brand-complement:#F4EFF4;
   --brand-complement-dark:hsl(300, 19%, 87%);
   --brand-complement-contrast-text: var(--brand);
@@ -943,9 +955,9 @@ ul.listing.groups li:first-child {
 .raleway {
   background-color: #E8EAED;
   --brand: #6B38BA;
-  --brand100:#6B38BA10;
-  --brand200:#6B38BA20;
-  --brand400:#6B38BA40;
+  --brand10:#6B38BA10;
+  --brand20:#6B38BA20;
+  --brand40:#6B38BA40;
   --brand-contrast-text: #E4D8F7;
   --brand-complement:#E4D8F7;
   --brand-complement-contrast-text:var(--brand);
@@ -970,7 +982,7 @@ ul.listing.groups li:first-child {
   font-family: "Playfair Display";
 }
 .raleway .list-caption {
-  color: #4d4242;
+  color: rgb(77, 66, 66);
   font-weight: 400;
   font-family: "Playfair Display";
 }
@@ -982,9 +994,9 @@ ul.listing.groups li:first-child {
 
 .browser {
   --brand: #2C3C4F;
-  --brand100:#2C3C4F10;
-  --brand200:#2C3C4F20;
-  --brand400:#2C3C4F40;
+  --brand10:#2C3C4F10;
+  --brand20:#2C3C4F20;
+  --brand40:#2C3C4F40;
   --brand-complement:#00BAA0;
   --brand-dark:darkblue;
   --brand-contrast-text: lightblue;
@@ -1022,7 +1034,7 @@ ul.listing.groups li:first-child {
   font-family: "serif";
 }
 .browser .list-caption {
-  color: #4d4242;
+  color: rgb(77, 66, 66);
   font-weight: 400;
   font-family: "sans-serif";
 }
@@ -1034,9 +1046,9 @@ ul.listing.groups li:first-child {
 
 .code {
   --brand: #242424;
-  --brand100:#44444410;
-  --brand200:#44444420;
-  --brand400:#44444440;
+  --brand10:#44444410;
+  --brand20:#44444420;
+  --brand40:#44444440;
   --brand-complement: #444445;
   --brand-dark: #0b5a56;
   --brand-contrast-text: #f1f1f1;
@@ -1060,7 +1072,7 @@ ul.listing.groups li:first-child {
   color: #888;
 }
 .code .list-overline {
-  color: #301c30;
+  color: rgb(48, 28, 48);
 }
 
 .dark {
@@ -1075,7 +1087,7 @@ ul.listing.groups li:first-child {
   --brand-contrast-text: hsl(var(--brand-h),var(--brand-s), 90%);
   --brand-complement-contrast-text: var(--brand-contrast-text);
   --border-color: #363636;
-  --hover-background-color:var(--brand100);
+  --hover-background-color:var(--brand10);
   --border-radius:4px;
   --box-shadow: 0 0 6px rgba(0,0,0,.126);
   --profile-image-radius: 12px;
@@ -1089,18 +1101,18 @@ ul.listing.groups li:first-child {
   font-family: var(--theme-font);
   background-color: #161718;
   color: #ededed;
-  --brand100: hsl(var(--brand-h),var(--brand-s), 15%);
-  --brand200: hsl(var(--brand-h),var(--brand-s), 30%);
-  --brand300: hsl(var(--brand-h),var(--brand-s), 45%);
-  --brand400: hsl(var(--brand-h),var(--brand-s), 55%);
-  --brand500: hsl(var(--brand-h),var(--brand-s), 68%);
-  --brand600: hsl(var(--brand-h),var(--brand-s), 80%);
-  --brand700: hsl(var(--brand-h),var(--brand-s), 87%);
-  --brand800: hsl(var(--brand-h),var(--brand-s), 96%);
-  --brand900: hsl(var(--brand-h),var(--brand-s), 98%);
-  --poll1: var(--brand100);
-  --poll2: var(--brand200);
-  --poll3: var(--brand400);
+  --brand10: hsl(var(--brand-h),var(--brand-s), 15%);
+  --brand20: hsl(var(--brand-h),var(--brand-s), 30%);
+  --brand30: hsl(var(--brand-h),var(--brand-s), 45%);
+  --brand40: hsl(var(--brand-h),var(--brand-s), 55%);
+  --brand50: hsl(var(--brand-h),var(--brand-s), 68%);
+  --brand60: hsl(var(--brand-h),var(--brand-s), 80%);
+  --brand70: hsl(var(--brand-h),var(--brand-s), 87%);
+  --brand80: hsl(var(--brand-h),var(--brand-s), 96%);
+  --brand90: hsl(var(--brand-h),var(--brand-s), 98%);
+  --poll1: var(--brand10);
+  --poll2: var(--brand20);
+  --poll3: var(--brand40);
 }
 .dark img {
   opacity: 0.75;
@@ -1121,7 +1133,7 @@ ul.listing.groups li:first-child {
   color: var(--text);
 }
 .dark .list-caption {
-  color: #E3E3E360;
+  color: rgba(227, 227, 227, 0.3764705882);
 }
 .dark .list-overline {
   color: var(--brand);
