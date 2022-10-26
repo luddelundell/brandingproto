@@ -39,9 +39,9 @@
   --brand50: hsl(var(--brand-h),var(--brand-s), 55%);
   --brand60: hsl(var(--brand-h),var(--brand-s), 45%);
   --brand70: hsl(var(--brand-h),var(--brand-s), 30%);
-  --brand80: hsl(var(--brand-h),var(--brand-s), 22%);
-  --brand90: hsl(var(--brand-h),var(--brand-s), 15%);
-  --brand100:hsl(var(--brand-h),var(--brand-s), 12%);
+  --brand80: hsl(var(--brand-h),var(--brand-s), 26%);
+  --brand90: hsl(var(--brand-h),var(--brand-s), 19%);
+  --brand100:hsl(var(--brand-h),var(--brand-s), 17%);
   --poll1: var(--brand10);
   --poll2: var(--brand20);
   --poll3: var(--brand40);
