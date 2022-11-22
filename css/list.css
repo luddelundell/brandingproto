@@ -45,6 +45,20 @@
   --poll1: var(--brand10);
   --poll2: var(--brand20);
   --poll3: var(--brand40);
+  --primary:#3a71aa;
+  --warning:#ffcd45;
+  --success:#358156;
+  --danger:#c15252;
+  --info:#29818d;
+  --default:#f0f1f2;
+  --secondary:#4f5153;
+  --warning-text:var(--text);
+  --success-text:#fff;
+  --info-text:#fff;
+  --secondary-text:#fff;
+  --default-text:var(--text);
+  --primary-text:#fff;
+  --danger-text:#fff;
 }
 
 .selector {
@@ -473,7 +487,12 @@ ul.listing.groups li:first-child {
 }
 
 .buttons {
+  background-color: var(--card-background);
+  padding: 1.5em;
   margin: 1em 0;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -486,20 +505,40 @@ ul.listing.groups li:first-child {
   font-weight: 500;
   border-radius: var(--border-radius);
   font-family: var(--theme-font);
+  background-color: var(--default);
+  color: #fff;
+  cursor: pointer;
 }
 .btn.btn-brand {
   background-color: var(--brand);
   color: var(--brand-contrast-text);
 }
-.btn.btn-brand:hover {
-  background-color: var(--brand-dark);
+.btn.btn-default {
+  color: var(--text);
 }
-.btn.btn-brand-complement {
-  background-color: var(--brand-complement);
-  color: var(--brand-complement-contrast-text);
+.btn.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-text);
 }
-.btn.btn-brand-complement:hover {
-  background-color: var(--brand-complement-dark);
+.btn.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-text);
+}
+.btn.btn-success {
+  background-color: var(--success);
+  color: var(--success-text);
+}
+.btn.btn-danger {
+  background-color: var(--danger);
+  color: var(--danger-text);
+}
+.btn.btn-warning {
+  background-color: var(--warning);
+  color: var(--warning-text);
+}
+.btn.btn-info {
+  background-color: var(--info);
+  color: var(--info-text);
 }
 
 .inlagg__chips {
@@ -1076,9 +1115,10 @@ ul.listing.groups li:first-child {
 }
 
 .dark {
-  --brand-h:144;
-  --brand-s:33%;
-  --brand-l:48%;
+  --foo:hsl(204, 18%, 36%);
+  --brand-h:204;
+  --brand-s:18%;
+  --brand-l:36%;
   --brand: hsl(var(--brand-h),var(--brand-s), var(--brand-l));
   --brand-dark: var(--brand80);
   --brand-complement-dark:#B489E8;
@@ -1101,6 +1141,21 @@ ul.listing.groups li:first-child {
   font-family: var(--theme-font);
   background-color: #161718;
   color: #ededed;
+  --warning: #866F31;
+  --info: #254F55;
+  --danger: #6E3939;
+  --success: #2B4F3B;
+  --default: #626262;
+  --secondary: #303030;
+  --primary: #2D4863;
+  --btn-color:#ffffff;
+  --warning-text:var(--btn-color);
+  --success-text:var(--btn-color);
+  --info-text:var(--btn-color);
+  --secondary-text:var(--btn-color);
+  --default-text:var(--btn-color);
+  --primary-text:var(--btn-color);
+  --danger-text:var(--btn-color);
   --brand10: hsl(var(--brand-h),var(--brand-s), 15%);
   --brand20: hsl(var(--brand-h),var(--brand-s), 30%);
   --brand30: hsl(var(--brand-h),var(--brand-s), 45%);
